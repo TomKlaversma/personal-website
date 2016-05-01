@@ -1,14 +1,14 @@
-$icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 // variables
+
+@import "fonts.scss";
 @import "variables.scss";
 
 
 // main css
-
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -18,8 +18,27 @@ $icon-font-path: '../fonts/';
 
 body{
   // set main size for font
+  font-family: 'Raleway';
   font-size:18px;
 }
+
+h1, h2, h3, h4, h5{
+    font-weight:700;
+}
+
+h1{
+  font-size:$font-size-extra-big;
+  line-height: 1em;
+}
+
+h2{
+  font-size:$font-size-big;
+}
+
+p{
+  line-height:1.4em;
+}
+
 
 // pages
 @import "about-me.scss";

@@ -1,0 +1,48 @@
+// about me css
+@import "gradient-mixer.scss";
+@import "variables.scss";
+
+#my-experience{
+  position:relative;
+  @include linear-gradient(130deg, #33e8f3 0%, #829952 100%);
+  color:$font-white;
+
+  .center-content{
+    width:100%;
+
+    ul.cv-list{
+      list-style: none;
+      margin: 0;
+      padding:0;
+      line-height:1.4em;
+
+      span.small-text{
+        font-size:0.5em;
+      }
+    }
+
+    .line-button{
+      margin:3em 0 0 0;
+      float:right;
+      display:block;
+      width:170px;
+      color:#fff;
+      font-size:0.8em;
+      border:2px solid #fff;
+      border-radius:8px;
+      text-align:center;
+      padding:5px 0;
+      transition: $button-transition;
+
+      @media screen and (max-width: $screen-sm) {
+        float:left;
+      }
+
+      &:hover{
+        text-decoration: none;
+        color:#000;
+        border:2px solid #000;
+      }
+    }
+  }
+}

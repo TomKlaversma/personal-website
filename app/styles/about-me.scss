@@ -5,28 +5,32 @@
 #about-me{
   @include linear-gradient(130deg, #339bf3 0%, #623fa1 100%);
   color:$font-white;
-  height: $full-browser-height;
   position: relative;
-
   .center-content{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-
-    max-width:480px;
-
+    width:100%;
+    
     p{
       margin-top:28px;
     }
   }
 
+  #word-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+
   .profile-picture{
-    width:484px;
-    height:688px;
+    width:30%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:bottom;
+    height:$full-browser-height;
+    max-width:484px;
     display:block;
     position:absolute;
     bottom:0;
-    right:20px;
+    left:50%;
     background-image:url($image-path+'tom-klaversma.png')
   }
 

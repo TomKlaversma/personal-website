@@ -3,7 +3,6 @@
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 // variables
-
 @import "fonts.scss";
 @import "variables.scss";
 
@@ -40,5 +39,41 @@ p{
 }
 
 
+#clipping-mask{
+  width:100%;
+  overflow:hidden;
+}
+
+.rotated-slide{
+  z-index:10;
+  transform:rotate(-2deg);
+  margin:-40px;
+  background-color:#fff;
+}
+
+.rotated-slide .container{
+  @media screen and (max-width: $screen-sm) {
+    padding:0px 50px;
+  }
+}
+.rotated-slide .rotate-back{
+  transform:rotate(2deg);
+}
+
+.center-content{
+  z-index:10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.full-browser-height{
+    min-height: $full-browser-height;
+}
+
+
 // pages
 @import "about-me.scss";
+@import "my-work.scss";
+@import "my-experience.scss";
+@import "contact-me.scss";

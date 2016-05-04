@@ -8,18 +8,25 @@
   position: relative;
   .center-content{
     width:100%;
-    
+
     p{
       margin-top:28px;
     }
   }
 
-  #word-list{
-    list-style:none;
-    margin:0;
-    padding:0;
+  #my-name{
+    position:relative;
   }
 
+  #word-list-header{
+    position:relative;
+
+    #word-list{
+      list-style:none;
+      margin:0;
+      padding:0;
+    }
+  }
   .profile-picture{
     width:30%;
     background-size:contain;

@@ -4,7 +4,7 @@
 var myWorkTitle = $('#my-work h2 span');
 var myWorkTimeline = new TimelineMax({paused:true})
     .from(myWorkTitle, 1, {top:-300, autoAlpha:0, ease:Bounce.easeOut})
-    .from('#slideshow', 1, {autoAlpha:0})
+    //.from('#slideshow', 1, {autoAlpha:0})
 
  $(window).scroll(function(){
   if($('#my-work').isOnScreen(0.5, 0.5)){

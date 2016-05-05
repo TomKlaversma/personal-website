@@ -47,15 +47,17 @@ function MakeWordSwitcher(domElement){
   return wordList;
 }
 
+
+
 var aboutMeSwitcher = new MakeWordSwitcher('#word-list');
     aboutMeSwitcher.initialize();
 
 var myName = $('#about-me h2 span');
-    $(myName).parent().css({height:$(myName).outerHeight()})
-
 var myDescription = $('#about-me p span');
-    $(myDescription).parent().css({height:$(myDescription).outerHeight()})
+
+    $('.profile-picture').css({position:'absolute'})
 
 var homeAnimation = new TimelineMax()
     .from(myName, 1, {top:-400, autoAlpha:0, ease:Bounce.easeOut, delay:2, onComplete:aboutMeSwitcher.startAnimation, onCompleteParams:[aboutMeSwitcher]}, 0)
+    .from('.profile-picture', 1, {top:900, ease:Power4.easeOut}, 0.5)
     .from(myDescription, 3, {autoAlpha:0}, 4)

@@ -1,6 +1,26 @@
 #my-work{
   position:relative;
+  height:80vh;
+
   .center-content{
     width:100%;
+
+    .slideshow{
+      overflow:hidden;
+      height:60vh;
+
+      transform:skew(0deg, -2deg);
+      margin-top:-10vh;
+
+      .item{
+          margin-right:0 2%;
+          height:60vh;
+          width:60%;
+          background-color:#efefef;
+          float:left;
+          position:absolute;
+          display:block;
+      }
     }
+  }
 }

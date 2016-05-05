@@ -31,7 +31,7 @@
       <div class="center-content">
         <div class="container">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6">
               <article>
                 <h2 id='my-name'><span class="animation">Tom Klaversma</span></h2>
                 <h1 id="word-list-header">
@@ -63,7 +63,15 @@
           <div class="row">
             <div class="col-xs-12">
               <article>
-                <h2>Projects</h2>
+                <h2><span class="animation">Projects</span></h2>
+
+                  <div id="slideshow">
+                    <div class="item">
+                    </div>
+                    <div class="item">
+                    </div>
+                  </div>
+
               </article>
             </div>
           </div>
@@ -76,10 +84,10 @@
           <div class="container">
             <div class="row">
               <div class="col-xs-12">
-                <h2>Experience</h2>
+                <h2><span class="animation">Experience</span></h2>
               </div>
               <div class="col-sm-6">
-                <h3>Work</h3>
+                <h3><span class="animation">Work</span></h3>
                 <ul class="cv-list">
                   <li>Greenhouse Group <span class="small-text">- Media designer, 2015 - present</span></li>
                   <li>Greenhouse Group <span class="small-text">- Graduate internship, 2015</span></li>
@@ -88,7 +96,7 @@
                 </ul>
               </div>
               <div class="col-sm-6">
-                <h3>Education</h3>
+                <h3><span class="animation">Education</span></h3>
                 <ul class="cv-list">
                   <li>Minor Datavisualisation <span class="small-text">- Avans Hogescholen, 2014 - 2015</span></li>
                   <li>Communication and Media Design <span class="small-text">- Avans Hogescholen, 2012 - 2015</span></li>
@@ -104,14 +112,13 @@
         </div>
     </section>
 
-
     <section id='contact-me' class='slide full-browser-height rotated-slide'>
       <div class="center-content">
         <div class="container rotate-back">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <article>
-                <h2>Contact me</h2>
+                <h2><span class="animation">Contact me</span></h2>
                 <form>
                   Hi, my name is <input required name="name" id="form-name" type="text" placeholder="Bruce Wayne"/>
                   and I would like to
@@ -148,6 +155,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="/bower_components/gsap/src/minified/TimelineMax.min.js"></script>
+    <script src="/bower_components/isOnScreen/jquery.isonscreen.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -168,8 +176,10 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/fix-animation-elements.js"></script>
     <script src="scripts/about-me-animation.js"></script>
     <script src="scripts/contact-form.js"></script>
+    <script src="scripts/my-work.js"></script>
     <!-- endbuild -->
   </body>
 </html>

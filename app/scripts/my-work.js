@@ -4,7 +4,7 @@
 var myWorkTitle = $('#my-work h2 span');
 var myWorkTimeline = new TimelineMax({paused:true})
     .from(myWorkTitle, 1, {top:-300, autoAlpha:0, ease:Bounce.easeOut})
-    //.from('#slideshow', 1, {autoAlpha:0})
+    .from('#slideshow', 1, {autoAlpha:0})
 
  $(window).scroll(function(){
   if($('#my-work').isOnScreen(0.5, 0.5)){
@@ -20,15 +20,20 @@ function makeSlideshow(slideshowContainer){
 
     container : $(slideshowContainer),
     items : [],
-    currentPos: 1,
+    slidesVisible: [0,1,2],
     animationInterval : 0,
     playSpeed: 6000,
 
     initialize : function(){
       this.items = $(this.container).children();
-      //for(var i = 0; i < this.items.length; i++){
-      //}
 
+      // set all items in correct position
+
+      for(var i = 0; i < this.items.length; i++){
+        TweenMax.set(this.items[i], {left: -60 + i * $(this.items[i]).innerHeight()+"px" })
+      }
+
+      TweenMax.set(this.items[0], {scale:0.8});
 
 
 

@@ -7,19 +7,23 @@
 
     #slideshow{
       overflow:hidden;
+      width:100%;
+      display:block;
       height:60vh;
+
+      position:relative;
 
       transform:skew(0deg, -2deg);
       margin-top:-10vh;
 
       .item{
-          margin-right:0 2%;
           height:60vh;
           width:60%;
+
           background-color:#efefef;
-          float:left;
+
           position:absolute;
-          display:block;
+          bottom:0;
       }
     }
   }

@@ -28,16 +28,19 @@ function makeSlideshow(slideshowContainer){
 
       // set all items in correct position
 
+      TweenMax.set([this.items[0], this.items[2]], {scale:0.7, y:-40});
+
       for(var i = 0; i < this.items.length; i++){
-        TweenMax.set(this.items[i], {left: -60 + i * $(this.items[i]).innerHeight()+"px" })
+        TweenMax.set(this.items[i], {transformOrigin: "center bottom", left: -window.innerWidth*0.05 + i * $(this.items[i]).innerWidth()+"px" });
       }
 
-      TweenMax.set(this.items[0], {scale:0.8});
-
-
-
-      this.autoPlay();
-        //TweenMax.set(this.items[i], {autoAlpha:0});
+      //this.autoPlay();
+      //TweenMax.set(this.items[i], {autoAlpha:0});
+    },
+    resizeItems: function(){
+      for(var i=0; i < this.items.length; i++){
+        TweenMax.set(this.items[i], {left: -window.innerWidth*0.05 + i * $(this.items[i]).innerWidth()+"px" })
+      }
     },
     autoPlay : function(){
       this.animationInterval = window.setInterval(function(){
@@ -66,6 +69,11 @@ function makeSlideshow(slideshowContainer){
 
   return slideshow;
 }
+
+window.onresize = function(){
+  projectsSlideshow.resizeItems();
+}
+
 
 var projectsSlideshow = new makeSlideshow('#slideshow');
     projectsSlideshow.initialize();

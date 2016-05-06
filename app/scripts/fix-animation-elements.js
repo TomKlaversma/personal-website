@@ -1,8 +1,14 @@
 // fix titles for animations
 
-var titles = $('span.animation');
-$(titles).parent().css({height:$(titles).outerHeight()})
+var titles = document.querySelectorAll('span.animation');
+function resizeTextholders(){
+  for(var i = 0; i < titles.length; i++){
+    titles[i].parentNode.style.height = titles[i].offsetHeight+ 'px';
+  }
+}
+
+resizeTextholders();
 
 window.onresize = function(){
-  $(titles).parent().css({height:$(titles).outerHeight()});
+  resizeTextholders();
 }

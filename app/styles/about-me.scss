@@ -1,4 +1,5 @@
-// about me css
+// about me
+
 @import "gradient-mixer.scss";
 @import "variables.scss";
 
@@ -6,6 +7,7 @@
   @include linear-gradient(130deg, #339bf3 0%, #623fa1 100%);
   color:$font-white;
   position: relative;
+
   .center-content{
     width:100%;
 
@@ -38,7 +40,16 @@
     position:absolute;
     bottom:0;
     left:50%;
-    background-image:url($image-path+'tom-klaversma.png')
-  }
+    background-image:url($image-path+'tom-klaversma.png');
 
+    @media screen and (max-width: $screen-xs) {
+      width:200px;
+      margin:auto;
+      position:relative;
+      display:inline-block;
+      float:none;
+      left:auto;
+    }
+
+  }
 }

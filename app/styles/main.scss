@@ -69,10 +69,20 @@ span.animation{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+
+  @media screen and (max-width: $screen-xs) {
+    position:relative;
+    top:auto;
+    transform:none;
+    padding:120px 20px;
+  }
 }
 
 .full-browser-height{
     min-height: $full-browser-height;
+    @media screen and (max-width: $screen-xs) {
+      min-height:auto;
+    }
 }
 
 

@@ -12,7 +12,6 @@ var myWorkTimeline = new TimelineMax({paused:true})
   };
 })
 
-
 // slideshow
 function makeSlideshow(slideshowContainer){
 

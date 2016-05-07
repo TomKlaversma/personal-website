@@ -5,7 +5,7 @@
 #my-experience{
   position:relative;
   @include linear-gradient(130deg, #33e8f3 0%, #829952 100%);
-  color:$font-white;
+  color:$white;
 
   .center-content{
     width:100%;

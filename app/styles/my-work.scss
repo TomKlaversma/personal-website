@@ -2,6 +2,7 @@
 @import "variables.scss";
 
 #my-work{
+  user-select:none;
   position:relative;
   height:80vh;
 
@@ -34,6 +35,40 @@
             background-color:#efefef;
             position:absolute;
             bottom:0;
+            cursor:pointer;
+
+            .preview{
+                transform:skewY(2deg);
+                width:50%;
+                height:50%;
+                position:absolute;
+                top:20%;
+                left:25%;
+                background-image:url(../images/test.png);
+                background-repeat:no-repeat;
+                background-size:contain;
+                background-position:center;
+            }
+
+            .lint{
+                background-color:#fff;
+                transform:skewY(-2deg);
+                width:70%;
+                position:absolute;
+                bottom:10%;
+                padding:20px;
+                left:-20px;
+                box-shadow:15px 15px 20px rgba(0,0,0,0.15);
+            }
+
+            .lint:before{
+              background-color:red;
+              width:10px;
+              height:100px;
+              left:-20px;
+              position:absolute;
+              transform: skewY(4deg);
+            }
         }
       }
 

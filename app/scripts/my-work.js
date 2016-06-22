@@ -29,10 +29,6 @@ function makeSlideshow(slideshowContainer){
           backgroundColor:'#efefef'
         });
 
-        TweenMax.set($(this.items[i]).find('.lint'), {
-          autoAlpha:0
-        });
-
         this.middleSlide = 1;
         TweenMax.set(this.items[this.middleSlide], {scale:1, top:0, backgroundColor:'#028398'});
       }
@@ -70,10 +66,6 @@ function makeSlideshow(slideshowContainer){
             }
             parent.middleSlide += 1*dir;
             TweenMax.to(parent.items[parent.middleSlide], parent.swapSpeed, {top:0, scale:1, backgroundColor:'#028398', onComplete:setParentPlaying, onCompleteParams:[parent, false]})
-            TweenMax.fromTo($(parent.items[parent.middleSlide]).find('.lint'), parent.swapSpeed,
-              {autoAlpha:0, y:10, x:-40, width:0},
-              {autoAlpha:1, y:0, x:-20, width:20, delay: swapSpeed*2, ease: Power3.easeOut}
-            );
           }
         }
 
@@ -116,12 +108,9 @@ var projectsSlideshow = new makeSlideshow('#slideshow #items');
     var slideshowItems = $('#slideshow .item')
     var slideshowButtons = $('#slideshow .slideshow-button');
 
-    TweenMax.set($(slideshowItems[1]).find('.lint'), {autoAlpha:1});
-
     var myWorkTimeline = new TimelineMax({paused:true})
         .from(myWorkTitle, 1, {top:-300, autoAlpha:0, ease:Bounce.easeOut})
-        .staggerFrom(slideshowItems, 1, {y:-300, autoAlpha:0, ease:Bounce.easeOut, onComplete:projectsSlideshow.autoPlay}, 0.2)
-        .from($(slideshowItems[1]).find('.lint'), 0.5, {autoAlpha:0, y:10, x:-40, width:0, ease: Power3.easeOut}, 2);
+        .staggerFrom(slideshowItems, 1, {y:-300, autoAlpha:0, ease:Bounce.easeOut, onComplete:projectsSlideshow.autoPlay}, 0.2);
 
     document.getElementById("backward-button").addEventListener("click", function(){projectsSlideshow.play(-1)});
     document.getElementById("forward-button").addEventListener("click", function(){projectsSlideshow.play(1)});

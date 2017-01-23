@@ -1,5 +1,3 @@
-//
-// // do for each input
 $(document).ready(function(){
   $('input').keyup(function(){
     if($(this).val().length > 0){
@@ -15,8 +13,16 @@ $(document).ready(function(){
     }else{
       TweenMax.to(this, 0.6, {backgroundColor: '#efefef'});
     }
-  })
-})
+  });
+
+  $("contact-form").ajaxSubmit({
+    url: 'server.php',
+    type: 'post'
+  }).done(function() {
+      TweenMax.to('#done-message', 0.5, {autoAlpha: 1}
+  });
+});
+
 function getWidthOfInput(inputEl) {
   var tmp = document.createElement("span");
   tmp.className = "input-element tmp-element";
@@ -25,4 +31,8 @@ function getWidthOfInput(inputEl) {
   var theWidth = tmp.getBoundingClientRect().width;
   document.body.removeChild(tmp);
   return theWidth;
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }

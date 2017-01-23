@@ -1,11 +1,13 @@
+'use strict';
+
 function MakeWordSwitcher(domElement){
   var wordList = {
-    speed : 3000,
-    domElement : domElement,
+    speed: 3000,
+    domElement: domElement,
     currentWord: 0,
-    words:[],
-    animationInterval:"",
-    initialize:function(){
+    words: [],
+    animationInterval: '',
+    initialize: function(){
       var wordList = $(this.domElement).children();
       var wordListParent = $(this.domElement).parent();
 
@@ -16,8 +18,8 @@ function MakeWordSwitcher(domElement){
       for(var i = 0; i < wordList.length; i++){
         this.words.push($(wordList[i]));
         $(this.words[i]).css({
-          'position':'absolute',
-          'top':0
+          'position': 'absolute',
+          'top': 0
         })
         TweenMax.set(this.words[i], {left:300, autoAlpha:0, ease:Power2.easeOut})
       }
@@ -44,20 +46,17 @@ function MakeWordSwitcher(domElement){
       }, parent.speed);
     }
   }
+  wordList.initialize();
   return wordList;
 }
 
-
-
 var aboutMeSwitcher = new MakeWordSwitcher('#word-list');
-    aboutMeSwitcher.initialize();
-
 var myName = $('#about-me h2 span');
 var myDescription = $('#about-me p span');
 
-    $('.profile-picture').css({position:'absolute'})
+$('.profile-picture').css({position:'absolute'});
 
 var homeAnimation = new TimelineMax()
     .from(myName, 1, {top:-400, autoAlpha:0, ease:Bounce.easeOut, delay:2, onComplete:aboutMeSwitcher.startAnimation, onCompleteParams:[aboutMeSwitcher]}, 0)
     .from('.profile-picture', 1, {top:900, ease:Power4.easeOut}, 0.5)
-    .from(myDescription, 3, {autoAlpha:0}, 4)
+    .from(myDescription, 3, {autoAlpha:0}, 4);

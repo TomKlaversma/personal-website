@@ -1,55 +1,57 @@
 // about me css
+
 @import "gradient-mixer.scss";
 @import "variables.scss";
 
-#contact-me{
-  .center-content{
-    width:100%;
-    form{
-      input{
+#contact-me {
+  .center-content {
+    width: 100%;
+
+    form {
+      input {
         padding: 10px;
-        font-size:1.2em;
-        border:none;
-        width:auto;
-
+        font-size: 1.2em;
+        border: none;
+        width: auto;
       }
 
-      input#form-name{
-        color:$colour-pearl;
-        width:156px;
-      }
-    }
-
-    select{
-      height:40px;
-      padding:10px 10px 10px 15px;
-      border:none;
-      color:$colour-pearl;
-      background-color:transparent;
-      font-size:1.2em;
-      option{
-        font-size:1em;
-        padding-left:10px;
+      input#form-name {
+        color: $colour-pearl;
+        width: 156px;
       }
     }
 
-    textarea{
-      margin-top:15px;
-      border:none;
-      display:inline-block;
-      background-color:#efefef;
-      border-radius:5px;
-      width:100%;
-      padding:25px;
-      color:$colour-pearl;
+    select {
+      height: 41px;
+      padding: 10px 10px 10px 15px;
+      border: none;
+      color: $colour-pearl;
+      background-color: transparent;
+      font-size: 1.2em;
+
+      option {
+        font-size: 1em;
+        padding-left: 10px;
+      }
     }
 
-    input[type="submit"]{
-      font-size:1em;
+    textarea {
+      margin-top: 15px;
+      border: none;
+      display: inline-block;
+      background-color: #efefef;
+      border-radius: 5px;
+      width: 100%;
+      padding: 25px;
+      color: $colour-pearl;
+    }
+
+    input[type="submit"] {
+      font-size: 1em;
       border: 2px solid $colour-pearl;
-      border-radius:15px;
-      background-color:transparent;
-      color:$colour-pearl;
+      border-radius: 15px;
+      background-color: transparent;
+      color: $colour-pearl;
       transition: $button-transition;
 
       margin:3em 0 0 0;
@@ -59,8 +61,8 @@
       padding:6px 10px;
 
       &:hover{
-        border:2px solid #000;
-        color:#000;
+        border: 2px solid #000;
+        color: #000;
       }
     }
   }

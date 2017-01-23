@@ -19,7 +19,7 @@ $(document).ready(function(){
     url: 'server.php',
     type: 'post'
   }).done(function() {
-      TweenMax.to('#done-message', 0.5, {autoAlpha: 1}
+      TweenMax.to('#done-message', 0.5, {autoAlpha: 1});
   });
 });
 

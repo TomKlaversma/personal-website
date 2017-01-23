@@ -1,0 +1,28 @@
+// projects
+
+#project {
+  #hero-image {
+    width: 100%;
+    height: 60%;
+    margin-top: -25px;
+    min-height: 300px;
+    background-color: #000;
+    transform: skewY(-2deg);
+  }
+
+  #imac {
+      width: 310px;
+      height: 250px;
+      background-color: red;
+      display: block;
+      position: relative;
+      margin: auto;
+      margin-top: -175px;
+  }
+
+  #excerpt {
+    padding: 5%;
+    max-width: 750px;
+    margin: auto;
+  }
+}

@@ -27,13 +27,13 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <section id='about-me' class='slide full-browser-height'>
+    <section id="about-me" class="slide full-browser-height">
       <div class="center-content">
         <div class="container">
           <div class="row">
             <div class="col-sm-6">
               <article>
-                <h2 id='my-name'><span class="animation">Tom Klaversma</span></h2>
+                <h2 id="my-name"><span class="animation">Tom Klaversma</span></h2>
                 <h1 id="word-list-header">
                   <ul id="word-list">
                     <li>Designer</li>
@@ -45,10 +45,11 @@
                     <li>Sporter</li>
                   </ul>
                 </h1>
-                <p><span class="animation">I’m a 23 years old designer with a love for code, living in
-      the area of Eindhoven. I’m currently working as a Media
-      Designer at Greenhouse Group, creating many forms of
-      digital advertising.<span></p>
+                <p><span class="animation">
+                  I’m a 24 year old designer with a love for code, living in Eindhoven.
+                  I’m currently working as a Media Designer at Greenhouse Group, creating customer friendly
+                  digital advertising.
+                <span></p>
               </article>
             </div>
           </div>
@@ -57,7 +58,7 @@
       <div class="profile-picture"></div>
     </section>
 
-    <section id='my-work' class='slide full-browser-height rotated-slide'>
+    <section id="my-work" class="slide full-browser-height rotated-slide">
       <div class="center-content">
         <div class="container rotate-back">
           <div class="row">
@@ -67,19 +68,19 @@
 
                 <div id="slideshow">
                   <div id="items">
-                    <div class="item">
+                    <div class="item" data-link="prfactor.html">
                       <div class="preview"></div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-link="eneco-ns.html">
                       <div class="preview"></div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-link="test.html">
                       <div class="preview"></div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-link="test2.html">
                       <div class="preview"></div>
                     </div>
-                    <div class="item">
+                    <div class="item" data-link="test3.html">
                       <div class="preview"></div>
                     </div>
                   </div>
@@ -93,7 +94,7 @@
       </div>
     </section>
 
-    <section id='my-experience' class='slide full-browser-height'>
+    <section id="my-experience" class="slide full-browser-height">
         <div class="center-content">
           <div class="container">
             <div class="row">
@@ -126,24 +127,24 @@
         </div>
     </section>
 
-    <section id='contact-me' class='slide full-browser-height rotated-slide'>
+    <section id="contact-me" class="slide full-browser-height rotated-slide">
       <div class="center-content">
         <div class="container rotate-back">
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <article>
                 <h2><span class="animation">Contact me</span></h2>
-                <form id='contact-form'>
+                <form id="contact-form">
                   Hi, my name is <input required name="name" id="form-name" type="text" placeholder="Bruce Wayne"/>
                   and I would like to
                   <select>
                     <option>ask you a question</option>
-                    <option>give you an assignment</option>
+                    <option>request your services</option>
                     <option>offer you a job</option>
                     <option>say hi</option>
                     <option>do something else</option>
                   </select>.
-                  <br/>This is what's on my mind: <textarea></textarea>
+                  <br/>This is what"s on my mind: <textarea></textarea>
                   <input type="submit" value="Off you go!" />
                 </form>
               </article>
@@ -154,14 +155,22 @@
     </section>
   </div>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<section id="popup">
+  <div id="close-button">
+    <div id="cross1" class="cross"></div>
+    <div id="cross2" class="cross"></div>
+  </div>
+  <iframe src="projects/template.html"></iframe>
+</section>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site"s ID. -->
     <!-- <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
       function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
       e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
+      e.src="https://www.google-analytics.com/analytics.js";
+      r.parentNode.insertBefore(e,r)}(window,document,"script","ga"));
+      ga("create","UA-XXXXX-X");ga("send","pageview");
     </script> -->
 
     <!-- build:js scripts/vendor.js -->
@@ -194,6 +203,7 @@
     <script src="scripts/about-me-animation.js"></script>
     <script src="scripts/contact-form.js"></script>
     <script src="scripts/my-work.js"></script>
+    <script src="scripts/popup.js"></script>
     <!-- endbuild -->
   </body>
 </html>
